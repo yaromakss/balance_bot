@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-
 from environs import Env
 
 
@@ -37,16 +36,16 @@ def load_config(path: str = None):
 
     return Config(
         tg_bot=TgBot(
-            token="BOT_TOKEN",
-            admin_ids=[],
+            token="1753718100:AAEzZOqjo9D_g5XNeOXkVguM9ChC805CumA",
+            admin_ids=[578706671],
             use_redis=False,
         ),
         db=DbConfig(
-            host='DB_HOST',
-            password='DB_PASS',
-            user='DB_USER',
-            database='DB_NAME',
-            db_uri='DB_URI'
+            host='localhost',
+            password='538feijer',
+            user='postgres',
+            database='balance_bot',
+            db_uri='jdbc:postgresql://localhost:5432/balance_bot'
         ),
         misc=Miscellaneous()
     )
