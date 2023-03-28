@@ -71,5 +71,4 @@ def get_balance(user_id):
     cur = base.cursor()
     cur.execute('SELECT balance FROM "user" WHERE id = %s', (user_id,))
     user_balance = cur.fetchone()
-    print(user_balance[0])
     return user_balance[0]
